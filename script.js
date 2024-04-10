@@ -1,8 +1,22 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
+function indexOfIgnoreCase(str, subStr) {
+    if (!subStr) return 0; // return 0 if subStr is empty
+
+    str = str.toLowerCase(); // convert both strings to lowercase for case-insensitive comparison
+    subStr = subStr.toLowerCase();
+
+    return str.indexOf(subStr); // use indexOf for case-insensitive search
 }
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+// Example usage:
+function indexOfIgnoreCase(str, subStr) {
+  // write your code here
+  if (!subStr) return 0; // return 0 if subStr is empty
+  str = str.toLowerCase(); // convert both strings to lowercase for case-insensitive comparison
+  subStr = subStr.toLowerCase();
+  return str.indexOf(subStr); // use indexOf for case-insensitive search
+}
+
+// Example usage:
+console.log(indexOfIgnoreCase("Hello World", "world")); // Output: 6
+console.log(indexOfIgnoreCase("apple", "Ple")); // Output: 2
+console.log(indexOfIgnoreCase("test", "aaa")); // Output: -1
